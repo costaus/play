@@ -6,6 +6,23 @@
     <title>Ganhe em Dólar com Vídeos de Futebol!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!--
+░░░░░░░░▄██▄░░░░░░▄▄░░
+░░░░░░░▐███▀░░░░░▄███▌
+░░▄▀░░▄█▀▀░░░░░░░░▀██░
+░█░░░██░░░░░░░░░░░░░░░
+█▌░░▐██░░▄██▌░░▄▄▄░░░▄
+██░░▐██▄░▀█▀░░░▀██░░▐▌
+██▄░▐███▄▄░░▄▄▄░▀▀░▄██
+▐███▄██████▄░▀░▄█████▌
+▐████████████▀▀██████░
+░▐████▀██████░░█████░░
+░░░▀▀▀░░█████▌░████▀░░
+░░░░░░░░░▀▀███░▀▀▀░░░░
+-->
+
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -104,6 +121,54 @@
     <footer class="text-center p-6 mt-12 bg-gray-800 border-t border-green-700">
         <p class="text-gray-500 text-sm">&copy; 2024 Todos os direitos reservados. Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
     </footer>
+
+    <script>
+        // Countdown Timer Logic
+        const minutesElement = document.getElementById('timer-minutes');
+        const secondsElement = document.getElementById('timer-seconds');
+        const timerBar = document.querySelector('.fixed-timer-bar'); // Get the timer bar element
+
+        let totalTimeInSeconds = 8 * 60; // 8 minutes
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(totalTimeInSeconds / 60);
+            const seconds = totalTimeInSeconds % 60;
+
+            minutesElement.textContent = String(minutes).padStart(2, '0');
+            secondsElement.textContent = String(seconds).padStart(2, '0');
+        }
+
+        function countdown() {
+            if (totalTimeInSeconds <= 0) {
+                clearInterval(timerInterval);
+                // Optional: Display a message or change button text when timer ends
+                const timerTextElement = timerBar.querySelector('.timer-text');
+                if (timerTextElement) {
+                    timerTextElement.innerHTML = '🔴 PROMOÇÃO ENCERRADA! 🔴';
+                    timerTextElement.classList.remove('text-yellow-300'); // Remove yellow
+                    timerTextElement.classList.add('text-red-500'); // Make text red
+                }
+                // Disable button or change its text (example)
+                const buyButton = document.querySelector('.glow-button');
+                if (buyButton) {
+                    // buyButton.disabled = true;
+                    // buyButton.textContent = 'PROMOÇÃO ENCERRADA';
+                    // buyButton.classList.remove('bg-green-500', 'hover:bg-green-400', 'glow-button');
+                    // buyButton.classList.add('bg-gray-500', 'cursor-not-allowed');
+                }
+                return;
+            }
+
+            totalTimeInSeconds--;
+            updateTimerDisplay();
+        }
+
+        // Initialize timer display
+        updateTimerDisplay();
+
+        // Start countdown every second
+        const timerInterval = setInterval(countdown, 1000);
+    </script>
 
 </body>
 </html>
