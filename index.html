@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,17 +22,17 @@
 ░░░▀▀▀░░█████▌░████▀░░
 ░░░░░░░░░▀▀███░▀▀▀░░░░
 -->
-
     
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Dark background, can be adjusted */
+            background-color: #1a202c; /* Dark background */
+            padding-top: 70px; /* Add padding to body to prevent content from being hidden by fixed timer */
         }
         .hero-banner {
             width: 100%;
-            max-height: 400px; /* Increased max-height for better visibility */
-            object-fit: cover; /* Ensures the image covers the area without distortion */
+            max-height: 400px;
+            object-fit: cover;
         }
         .glow-button {
             box-shadow: 0 0 15px rgba(52, 211, 153, 0.7), 0 0 25px rgba(52, 211, 153, 0.5);
@@ -41,17 +42,58 @@
             color: #1e293b; /* Dark text for contrast */
             padding: 10px 20px;
             border-radius: 8px;
-            font-weight: 900; /* Bolder price */
-            font-size: 2.5rem; /* Larger price */
+            font-weight: 900;
+            font-size: 2.5rem;
             display: inline-block;
             border: 2px solid #ca8a04; /* Darker gold border */
         }
         .football-texture {
             background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2334d399' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414zM41.95 17.536l1.414 1.414-8.486 8.486-1.414-1.414 8.486-8.486zM0 26h2V0h-2v26z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+        .fixed-timer-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #111827; /* Darker background for the bar */
+            padding: 10px 0;
+            z-index: 1000; /* Ensure it's above other content */
+            text-align: center;
+            border-bottom: 2px solid #facc15; /* Gold border bottom */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .timer-text {
+            font-size: 1.1rem; /* Adjusted size for fixed bar */
+            font-weight: bold;
+            color: #fde047; /* Bright yellow */
+            display: inline-block; /* Allows centering */
+        }
+        .timer-digits {
+            background-color: #1f2937;
+            color: #fde047;
+            padding: 3px 8px; /* Slightly smaller padding */
+            border-radius: 4px;
+            margin: 0 3px;
+            font-size: 1.3rem; /* Adjusted size */
+            min-width: 28px;
+            display: inline-block;
+            text-align: center;
+        }
+        /* Adjust header to not be overlapped by fixed timer bar */
+        header {
+            margin-top: 0; /* Header will be below the fixed bar naturally due to body padding */
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white football-texture">
+
+    <div class="fixed-timer-bar">
+        <p class="timer-text">
+            ⏰ PROMOÇÃO ACABA EM:
+            <span id="timer-minutes" class="timer-digits">08</span> :
+            <span id="timer-seconds" class="timer-digits">00</span>
+        </p>
+    </div>
 
     <header class="bg-green-600 p-6 text-center shadow-lg">
         <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-300">
@@ -172,3 +214,4 @@
 
 </body>
 </html>
+
