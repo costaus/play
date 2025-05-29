@@ -3,44 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Neymar - Fature com Futebol nas Redes Sociais</title>
+    <title>Ganhe em Dólar com Vídeos de Futebol!</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5;
+            background-color: #1a202c; /* Dark background, can be adjusted */
         }
-        .btn-gradient {
-            background-image: linear-gradient(to right, #10B981, #059669);
-            transition: all 0.3s ease;
+        .hero-banner {
+            width: 100%;
+            max-height: 400px; /* Increased max-height for better visibility */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
         }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, #059669, #10B981);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        .glow-button {
+            box-shadow: 0 0 15px rgba(52, 211, 153, 0.7), 0 0 25px rgba(52, 211, 153, 0.5);
         }
-        .accordion-header {
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        .price-tag {
+            background: linear-gradient(45deg, #fde047, #facc15); /* Gold gradient */
+            color: #1e293b; /* Dark text for contrast */
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 900; /* Bolder price */
+            font-size: 2.5rem; /* Larger price */
+            display: inline-block;
+            border: 2px solid #ca8a04; /* Darker gold border */
         }
-        .accordion-header:hover {
-            background-color: #e2e8f0;
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .accordion-content.active {
-            max-height: 200px;
-            transition: max-height 0.5s ease-in;
+        .football-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2334d399' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414zM41.95 17.536l1.414 1.414-8.486 8.486-1.414-1.414 8.486-8.486zM0 26h2V0h-2v26z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
 </head>
-<body class="antialiased text-gray-800">
-<!-- O conteúdo da página começa aqui -->
-<!-- OMITIDO: por questão de espaço na visualização -->
-<!-- O conteúdo completo foi fornecido pelo usuário e será salvo integralmente -->
+<body class="bg-gray-900 text-white football-texture">
+
+    <header class="bg-green-600 p-6 text-center shadow-lg">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-300">
+            ⚠️ Já pensou ganhar em dólar só postando vídeos de futebol? ⚠️
+        </h1>
+        <p class="mt-3 text-md sm:text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
+            Brasileiros estão faturando até <strong class="text-yellow-300">US$500 por semana</strong> com um método simples, usando apenas o celular!
+        </p>
+        <p class="mt-2 text-md sm:text-lg md:text-xl text-gray-100 font-semibold">
+            Vagas limitadas para quem quer mudar de vida com TikTok. Garanta a sua agora!
+        </p>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 sm:py-12">
+
+        <section class="mb-8 sm:mb-12 text-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRovsbBKnVj1Guq9ADTE2UVHB2PpUasrsPorKReTVJYgfV7O8ncYq7cbrs&s=10"
+                 alt="Banner Principal - Jogador de Futebol Comemorando"
+                 class="hero-banner rounded-lg shadow-2xl mx-auto border-4 border-green-500"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1200x400/1a202c/34d399?text=Banner+Futebol';">
+        </section>
+
+        <section class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl text-center border-2 border-green-500">
+            <h2 class="text-2xl sm:text-3xl font-bold text-green-400 mb-4">Acesso Exclusivo ao Método TikTok Lucrativo!</h2>
+            <p class="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+                Descubra o segredo para transformar sua paixão por futebol em uma fonte de renda em dólar.
+                Método testado e validado, direto ao ponto!
+            </p>
+
+            <div class="my-8">
+                <span class="text-gray-400 text-xl line-through mr-2">De R$99,90</span>
+                <div class="price-tag">
+                    R$9<span class="text-xl align-super">,99</span>
+                </div>
+                <p class="text-sm text-yellow-400 mt-2">(Oferta Especial por Tempo Limitado!)</p>
+            </div>
+
+            <a href="https://pay.cakto.com.br/xtkx2zz_399577"
+               target="_blank"
+               class="inline-block bg-green-500 hover:bg-green-400 text-gray-900 font-bold text-xl sm:text-2xl py-4 px-10 sm:px-16 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 glow-button">
+                QUERO COMPRAR AGORA!
+                <span class="ml-2">⚽</span>
+            </a>
+            <p class="text-xs text-gray-500 mt-4">Compra segura e acesso imediato.</p>
+        </section>
+
+        <section class="mt-12 text-center">
+            <h3 class="text-2xl font-semibold text-green-400 mb-6">O que você vai destravar:</h3>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-gray-800 p-6 rounded-lg border border-green-700">
+                    <h4 class="text-xl font-bold text-green-300 mb-2">🤑 Renda em Dólar</h4>
+                    <p class="text-gray-400">Aprenda a monetizar seus vídeos para o público internacional.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-green-700">
+                    <h4 class="text-xl font-bold text-green-300 mb-2">📱 Apenas com o Celular</h4>
+                    <p class="text-gray-400">Não precisa de equipamentos caros, só o seu smartphone.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-green-700">
+                    <h4 class="text-xl font-bold text-green-300 mb-2">🚀 Método Simplificado</h4>
+                    <p class="text-gray-400">Passo a passo fácil de seguir, mesmo para iniciantes.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 mt-12 bg-gray-800 border-t border-green-700">
+        <p class="text-gray-500 text-sm">&copy; 2024 Todos os direitos reservados. Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
+    </footer>
+
 </body>
 </html>
