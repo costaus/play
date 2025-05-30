@@ -43,7 +43,7 @@
 
     <header class="bg-claroRed py-4 shadow-md">
         <div class="container mx-auto flex justify-center items-center px-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Claro.svg" alt="[Image of Claro Logo]" class="h-24 sm:h-32" onerror="this.onerror=null;this.src='https://placehold.co/300x100/E4002B/FFFFFF?text=Claro+Logo';">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Claro.svg" alt="" class="h-24 sm:h-32" onerror="this.onerror=null;this.src='https://placehold.co/300x100/E4002B/FFFFFF?text=Claro+Logo';">
         </div>
     </header>
 
@@ -126,12 +126,12 @@
                     <ul id="internet-specs" class="text-lg text-claroDarkGray mb-2 space-y-1">
                         <li class="flex items-center justify-center">
                             <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-2xl font-bold text-claroLightBlue" id="megas-speed-text">600 Megas</span> de Velocidade
+                            <span class="text-2xl font-bold text-claroLightBlue">600 Megas</span> <span class="text-claroDarkGray">de Velocidade</span>
                         </li>
                         <li class="flex items-center justify-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Fone Ilimitado</li>
                         <li class="flex items-center justify-center">
                             <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-2xl font-bold">+</span> <span class="text-2xl font-bold text-claroLightBlue animate-pulse-glow">30 GB</span> de Bônus para Celular
+                            <span class="text-2xl font-bold">+</span> <span class="text-2xl font-bold text-claroLightBlue animate-pulse-glow inline-block">30 GB</span> <span class="text-claroDarkGray">de Bônus para Celular</span>
                         </li>
                     </ul>
                     <button class="bg-claroLightBlue text-claroWhite font-bold py-3 px-6 rounded-full shadow-md hover:bg-blue-700 transition duration-300 ease-in-out w-full">
@@ -159,13 +159,6 @@
                 const listItems = internetSpecsList.getElementsByTagName('li');
                 for (let i = 0; i < listItems.length; i++) {
                     listItems[i].style.marginBottom = '4px'; // Mantido do ajuste anterior
-                }
-
-                // Ajusta o espaçamento da frase "600 Megas de Velocidade"
-                const megasSpeedText = document.getElementById('megas-speed-text');
-                if (megasSpeedText) {
-                    // Removido o wordSpacing para não afetar o espaçamento entre "Megas" e "de Velocidade"
-                    // O espaçamento agora será controlado pelo HTML e Tailwind.
                 }
             }
         };
