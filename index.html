@@ -124,7 +124,10 @@
                     <h3 class="text-2xl font-bold mb-4 text-claroLightBlue">Claro Internet Fixa</h3>
                     <p class="text-4xl font-extrabold mb-4 text-claroDarkGray">R$ <span class="text-5xl">119,00</span><span class="text-lg font-normal">/mês</span></p>
                     <ul id="internet-specs" class="text-lg text-claroDarkGray mb-2 space-y-1">
-                        <li class="flex items-center justify-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-2xl font-bold text-claroLightBlue">600 Megas</span> de Velocidade</li>
+                        <li class="flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-2xl font-bold text-claroLightBlue" id="megas-speed-text">600 Megas</span> de Velocidade
+                        </li>
                         <li class="flex items-center justify-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Fone Ilimitado</li>
                         <li class="flex items-center justify-center">
                             <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
@@ -148,13 +151,21 @@
     </footer>
 
     <script>
-        // Função para ajustar o espaçamento das especificações da internet
+        // Função para ajustar o espaçamento de elementos específicos via JavaScript
         window.onload = function() {
+            // Ajusta a margem inferior para todos os itens da lista de especificações da internet
             const internetSpecsList = document.getElementById('internet-specs');
             if (internetSpecsList) {
                 const listItems = internetSpecsList.getElementsByTagName('li');
                 for (let i = 0; i < listItems.length; i++) {
-                    listItems[i].style.marginBottom = '4px'; // Ajuste este valor para o espaçamento desejado
+                    listItems[i].style.marginBottom = '4px'; // Mantido do ajuste anterior
+                }
+
+                // Ajusta o espaçamento da frase "600 Megas de Velocidade"
+                const megasSpeedText = document.getElementById('megas-speed-text');
+                if (megasSpeedText) {
+                    // Removido o wordSpacing para não afetar o espaçamento entre "Megas" e "de Velocidade"
+                    // O espaçamento agora será controlado pelo HTML e Tailwind.
                 }
             }
         };
