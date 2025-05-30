@@ -43,11 +43,11 @@
 
     <header class="bg-claroRed py-4 shadow-md">
         <div class="container mx-auto flex justify-center items-center px-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Claro.svg" alt="[Image of Claro Logo]" class="h-12 sm:h-16" onerror="this.onerror=null;this.src='https://placehold.co/150x50/E4002B/FFFFFF?text=Claro+Logo';">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Claro.svg" alt="[Image of Claro Logo]" class="h-24 sm:h-32" onerror="this.onerror=null;this.src='https://placehold.co/300x100/E4002B/FFFFFF?text=Claro+Logo';">
         </div>
     </header>
 
-    <section class="bg-claroRed text-claroWhite py-16 sm:py-24 text-center">
+    <section class="bg-claroRed text-claroWhite py-8 sm:py-12 text-center">
         <div class="container mx-auto px-4">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
                 Conecte-se com a <span class="text-claroWhite">Claro</span>!
@@ -123,7 +123,7 @@
                 <div class="md:col-span-3 bg-claroWhite p-8 rounded-xl shadow-lg border-2 border-claroLightBlue flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 mt-8">
                     <h3 class="text-2xl font-bold mb-4 text-claroLightBlue">Claro Internet Fixa</h3>
                     <p class="text-4xl font-extrabold mb-4 text-claroDarkGray">R$ <span class="text-5xl">119,00</span><span class="text-lg font-normal">/mês</span></p>
-                    <ul class="text-lg text-claroDarkGray mb-2 space-y-1">
+                    <ul id="internet-specs" class="text-lg text-claroDarkGray mb-2 space-y-1">
                         <li class="flex items-center justify-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-2xl font-bold text-claroLightBlue">600 Megas</span> de Velocidade</li>
                         <li class="flex items-center justify-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Fone Ilimitado</li>
                         <li class="flex items-center justify-center">
@@ -146,6 +146,19 @@
             <p class="mt-2 text-sm">Aproveite a melhor conexão do Brasil!</p>
         </div>
     </footer>
+
+    <script>
+        // Função para ajustar o espaçamento das especificações da internet
+        window.onload = function() {
+            const internetSpecsList = document.getElementById('internet-specs');
+            if (internetSpecsList) {
+                const listItems = internetSpecsList.getElementsByTagName('li');
+                for (let i = 0; i < listItems.length; i++) {
+                    listItems[i].style.marginBottom = '4px'; // Ajuste este valor para o espaçamento desejado
+                }
+            }
+        };
+    </script>
 
 </body>
 </html>
